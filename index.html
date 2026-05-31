@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Energia, Praca i Moc - Hulajnoga elektryczna</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #000000, #3b0000, #8b0000, #000000);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background: linear-gradient(90deg, #ff0000, #3b0000);
+  padding: 40px;
+  text-align: center;
+  animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1f2937;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 12px;
+  animation: fadeIn 1s ease;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h2 {
+  color: #ff4d4d;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
+img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.question {
+  background: #111827;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+button {
+  background: #ff0000;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 14px;
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: #ff0000;
+  transition: 1s;
+}
+
+.good { color: #22c55e; }
+.mid { color: #facc15; }
+.bad { color: #ef4444; }
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.pop {
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.5); }
+  to { transform: scale(1); }
+}
+
+body.good-bg {
+  background: linear-gradient(-45deg, #052e16, #14532d, #166534, #052e16);
+}
+
+body.mid-bg {
+  background: linear-gradient(-45deg, #1f2937, #92400e, #f59e0b, #1f2937);
+}
+
+body.bad-bg {
+  background: linear-gradient(-45deg, #000000, #7f1d1d, #dc2626, #000000);
+}
+
+header.good {
+  background: linear-gradient(90deg, #16a34a, #14532d);
+  transition: 0.8s;
+}
+
+header.mid {
+  background: linear-gradient(90deg, #f59e0b, #7c2d12);
+  transition: 0.8s;
+}
+
+header.bad {
+  background: linear-gradient(90deg, #dc2626, #450a0a);
+  transition: 0.8s;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>⚡ Hulajnoga elektryczna</h1>
+  <p>Energia • Praca • Moc</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>1. Wprowadzenie</h2>
+    <p>
+      Hulajnoga elektryczna to nowoczesny środek transportu, który wykorzystuje energię elektryczną do poruszania się. Zamiast siły mięśni, napęd zapewnia silnik zasilany z akumulatora. Dzięki temu pojazd jest wygodny, szybki i coraz częściej używany w miastach. W tym projekcie wyjaśnione zostanie, jak w hulajnodze działa energia, czym jest praca i moc oraz od czego zależy zużycie energii.
+    </p>
+    
+  </div>
+
+  <div class="card">
+    <h2>2. Energia w hulajnodze</h2>
+    <p>
+      W hulajnodze elektrycznej energia przechowywana jest w akumulatorze w postaci energii chemicznej. Podczas jazdy zamienia się ona w energię elektryczną, która zasila silnik. Następnie silnik przekształca ją w energię mechaniczną, czyli ruch kół.
+
+Im więcej pracy musi wykonać silnik, tym szybciej zużywana jest energia. Na zużycie energii wpływa wiele czynników, takich jak prędkość jazdy, masa użytkownika, nachylenie terenu oraz opory powietrza i tarcie.
+    </p>
+    
+  </div>
+
+  <div class="card">
+    <h2>3. Praca i moc</h2>
+    <p>
+      Praca w fizyce to działanie siły na pewnej drodze. W przypadku hulajnogi praca jest wykonywana przez silnik, który wprawia koła w ruch i pokonuje opory, takie jak grawitacja czy tarcie.
+
+Moc natomiast określa, jak szybko ta praca jest wykonywana. Im większa moc silnika, tym szybciej hulajnoga może przyspieszać i lepiej radzi sobie na wzniesieniach. Moc ma też wpływ na komfort jazdy oraz maksymalną prędkość pojazdu.
+    </p>
+
+  </div>
+
+  <div class="card">
+    <h2>4. Przykłady z życia</h2>
+    <p>
+      Hulajnoga elektryczna działa w praktyce jak mały pojazd elektryczny.
+      W mieście używa się jej do dojazdów do szkoły, pracy lub na zakupy.
+    </p>
+
+    <ul>
+      <li>10 km jazdy po mieście = średnie zużycie baterii</li>
+      <li>Podjazd pod górę = większa moc silnika</li>
+      <li>Hamowanie = utrata energii (czasem odzyskiwana)</li>
+      <li>Większa masa = większa praca silnika</li>
+    </ul>
+
+  </div>
+
+  <div class="card">
+    <h2>5. Ciekawostki</h2>
+    <ul>
+      <li>Niektóre hulajnogi odzyskują energię podczas hamowania (rekuperacja)</li>
+      <li>Silniki bezszczotkowe są bardziej wydajne i ciche</li>
+      <li>Bateria litowo-jonowa ma dużą gęstość energii</li>
+      <li>Typowa hulajnoga ma zasięg 15–50 km</li>
+    </ul>
+
+
+  </div>
+
+  <div class="card">
+    <h2>6. Podsumowanie</h2>
+    <p>
+      Hulajnoga elektryczna działa dzięki przemianie energii elektrycznej w energię mechaniczną. Kluczową rolę odgrywają tutaj praca wykonywana przez silnik oraz jego moc, która decyduje o osiągach pojazdu.
+
+Na zużycie energii wpływają warunki jazdy, takie jak teren, masa użytkownika i prędkość. Dzięki temu hulajnoga jest dobrym przykładem praktycznego zastosowania fizyki w codziennym życiu i pokazuje, jak energia, praca i moc działają w rzeczywistości.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>7. Quiz</h2>
+
+    <div class="question">
+      <p>1. Co zasila hulajnogę?</p>
+      <input type="radio" name="q1" value="1"> Akumulator<br>
+      <input type="radio" name="q1" value="0"> Benzyna
+    </div>
+
+    <div class="question">
+      <p>2. Co oznacza moc?</p>
+      <input type="radio" name="q2" value="1"> Szybkość pracy<br>
+      <input type="radio" name="q2" value="0"> Kolor
+    </div>
+
+    <div class="question">
+      <p>3. Co zwiększa zużycie energii?</p>
+      <input type="radio" name="q3" value="1"> Pod górę<br>
+      <input type="radio" name="q3" value="0"> Po płaskim
+    </div>
+
+    <div class="question">
+      <p>4. Energia zamienia się w:</p>
+      <input type="radio" name="q4" value="1"> Ruch<br>
+      <input type="radio" name="q4" value="0"> Dźwięk
+    </div>
+
+    <div class="question">
+      <p>5. Co zwiększa zużycie energii?</p>
+      <input type="radio" name="q5" value="1"> Masa użytkownika<br>
+      <input type="radio" name="q5" value="0"> Kolor
+    </div>
+
+    <button onclick="sprawdz()">Sprawdź wynik</button>
+
+    <div id="result"></div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+  </div>
+
+</div>
+
+<script>
+function sprawdz() {
+  let score = 0;
+
+  for (let i = 1; i <= 5; i++) {
+    let answers = document.getElementsByName("q" + i);
+    for (let a of answers) {
+      if (a.checked) score += parseInt(a.value);
+    }
+  }
+
+  let result = document.getElementById("result");
+  let fill = document.getElementById("fill");
+  let header = document.querySelector("header");
+
+  fill.style.width = (score / 5) * 100 + "%";
+
+  // reset klas
+  document.body.classList.remove("good-bg","mid-bg","bad-bg");
+  header.classList.remove("good","mid","bad");
+
+  result.classList.remove("good","mid","bad","shake","pop");
+
+  if (score === 5) {
+  result.innerHTML = "🔥 5/5 – Mistrz energii! Hulajnoga to dla Ciebie pestka ⚡";
+  result.classList.add("good","pop");
+
+  document.body.classList.add("good-bg");
+  header.classList.add("good");
+} 
+else if (score === 4) {
+  result.innerHTML = "⚡ 4/5 – Bardzo dobrze! Prawie jak inżynier hulajnóg 😄";
+  result.classList.add("good","pop");
+
+  document.body.classList.add("good-bg");
+  header.classList.add("good");
+} 
+else if (score === 3) {
+  result.innerHTML = "👍 3/5 – Nieźle! Widać, że rozumiesz podstawy energii";
+  result.classList.add("mid","pop");
+
+  document.body.classList.add("mid-bg");
+  header.classList.add("mid");
+} 
+else if (score === 2) {
+  result.innerHTML = "🙂 2/5 – Jest okej, ale warto jeszcze powtórzyć temat";
+  result.classList.add("mid","shake");
+
+  document.body.classList.add("mid-bg");
+  header.classList.add("mid");
+} 
+else {
+  result.innerHTML = "💥 0–1/5 – Oj, hulajnoga nie ma mocy 😄 wróć do teorii";
+  result.classList.add("bad","shake");
+
+  document.body.classList.add("bad-bg");
+  header.classList.add("bad");
+}
+}
+</script>
+
+</body>
+</html>
